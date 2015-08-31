@@ -2,8 +2,9 @@
 
 # Disable Strict Host checking for non interactive git clones
 mkdir -p -m 0700 /root/.ssh
-cp -rf /opt/ngddeploy/* /root/.ssh/ 
+cp -rf /opt/ngddeploy/$VIRTUAL_HOST/* /root/.ssh/ 
 echo -e "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+
 
 # Setup git variables
 if [ ! -z "$GIT_EMAIL" ]; then
