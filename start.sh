@@ -18,6 +18,7 @@ fi
 # Pull down code form git for our site!
 if [ ! -z "$GIT_REPO" ]; then
   rm -rf /usr/share/nginx/html/*
+  rm -rf /usr/share/nginx/html/.* 2> /dev/null
   if [ ! -z "$GIT_BRANCH" ]; then
     git clone -b $GIT_BRANCH $GIT_REPO /usr/share/nginx/html/
   else
