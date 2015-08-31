@@ -49,7 +49,7 @@ One of the nice features of this container is its ability to pull code from a gi
 To run the container and pull code simply specify the GIT_REPO URL including *git@* and then make sure you have a folder on the docker host with your id_rsa key stored in it:
 
 ```
-sudo docker run -e 'GIT_REPO=git@git.ngd.io:ngineered/ngineered-website.git'  -v /opt/ngddeploy/:/root/.ssh -p 8080:80 -d richarvey/nginx-php-fpm
+sudo docker run -e 'GIT_EMAIL=test@test.com' -e 'GIT_NAME=test' -e 'GIT_REPO=git@git.ngd.io:ngineered/ngineered-website.git'  -v /opt/ngddeploy/:/root/.ssh -p 8080:80 -d richarvey/nginx-php-fpm
 ```
 
 To pull a repository and specify a branch add the GIT_BRANCH environment variable:
